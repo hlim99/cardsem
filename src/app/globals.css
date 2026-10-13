@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+/* ── 카드셈 디자인 토큰 (tokens/colors.css, typography.css, layout.css 이식) ── */
+@theme {
+  /* Primary — Violet */
+  --color-violet-50: #f5f2ff;
+  --color-violet-100: #ece6ff;
+  --color-violet-200: #d9ceff;
+  --color-violet-300: #bba8ff;
+  --color-violet-400: #9b7eff;
+  --color-violet-500: #7e58ff;
+  --color-violet-600: #6b43f2;
+  --color-violet-700: #5a34d3;
+  --color-violet-800: #4829a8;
+  --color-violet-900: #34207a;
+
+  /* Neutral — cool gray */
+  --color-gray-0: #ffffff;
+  --color-gray-50: #f7f7fa;
+  --color-gray-100: #f0f0f5;
+  --color-gray-200: #e4e4ec;
+  --color-gray-300: #cfcfda;
+  --color-gray-400: #a6a6b6;
+  --color-gray-500: #7c7c8d;
+  --color-gray-600: #5d5d6c;
+  --color-gray-700: #44444f;
+  --color-gray-800: #2c2c34;
+  --color-gray-900: #18181d;
+
+  /* Semantic */
+  --color-green-50: #eaf8f0;
+  --color-green-500: #1da466;
+  --color-green-700: #157a4c;
+  --color-amber-50: #fff6e8;
+  --color-amber-500: #e8960c;
+  --color-amber-700: #b06f05;
+  --color-red-50: #fdedee;
+  --color-red-500: #e5484d;
+  --color-red-700: #b92f34;
+  --color-blue-50: #ebf2ff;
+  --color-blue-500: #2e7df6;
+  --color-blue-700: #1f5bc0;
+
+  /* Aliases */
+  --color-primary: #6b43f2;
+  --color-primary-hover: #5a34d3;
+  --color-primary-active: #4829a8;
+  --color-primary-soft: #f5f2ff;
+  --color-primary-soft-2: #ece6ff;
+
+  --color-page: #f7f7fa;
+  --color-card: #ffffff;
+  --color-subtle: #f0f0f5;
+  --color-inverse: #18181d;
+
+  --color-line: #e4e4ec;
+  --color-line-strong: #cfcfda;
+  --color-line-focus: #7e58ff;
+
+  --color-strong: #18181d;
+  --color-body: #44444f;
+  --color-muted: #7c7c8d;
+  --color-disabled: #a6a6b6;
+  --color-link: #5a34d3;
+
+  /* Domain */
+  --color-income: #2e7df6;
+  --color-income-soft: #ebf2ff;
+  --color-expense: #18181d;
+  --color-benefit: #6b43f2;
+  --color-benefit-soft: #f5f2ff;
+  --color-missed: #e8960c;
+  --color-missed-soft: #fff6e8;
+  --color-success: #1da466;
+  --color-success-soft: #eaf8f0;
+  --color-warning: #e8960c;
+  --color-warning-soft: #fff6e8;
+  --color-danger: #e5484d;
+  --color-danger-soft: #fdedee;
+  --color-info: #2e7df6;
+  --color-info-soft: #ebf2ff;
+
+
+  /* Type — Pretendard 단일 */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+  --font-icon: "Material Symbols Rounded";
+
+  --text-display: 32px;
+  --text-display--line-height: 1.25;
+  --text-display--font-weight: 700;
+  --text-h1: 24px;
+  --text-h1--line-height: 1.3;
+  --text-h1--font-weight: 700;
+  --text-h2: 20px;
+  --text-h2--line-height: 1.35;
+  --text-h2--font-weight: 700;
+  --text-h3: 17px;
+  --text-h3--line-height: 1.4;
+  --text-h3--font-weight: 600;
+  --text-body: 15px;
+  --text-body--line-height: 1.55;
+  --text-label: 14px;
+  --text-label--line-height: 1.45;
+  --text-label--font-weight: 500;
+  --text-caption: 13px;
+  --text-caption--line-height: 1.45;
+  --text-overline: 12px;
+  --text-overline--line-height: 1.4;
+  --text-overline--font-weight: 600;
+  --text-num-lg: 28px;
+  --text-num-lg--line-height: 1.2;
+  --text-num-lg--font-weight: 700;
+  --text-num-md: 20px;
+  --text-num-md--line-height: 1.25;
+  --text-num-md--font-weight: 700;
+  --text-num-sm: 15px;
+  --text-num-sm--line-height: 1.4;
+  --text-num-sm--font-weight: 600;
+
+  --text-nav: 11px; /* 모바일 하단 탭 라벨 */
+  --text-nav--line-height: 1.2;
+
+  --tracking-num: -0.01em;
+  --tracking-title: -0.02em;
+
+  /* Radius — "살짝 둥글둥글" */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-btn: 10px; /* md·sm 버튼, 아이콘 버튼 */
+
+  /* Shadow — 낮고 부드럽게 */
+  --shadow-1: 0 1px 2px rgba(24, 24, 29, 0.04), 0 1px 3px rgba(24, 24, 29, 0.04);
+  --shadow-2: 0 2px 6px rgba(24, 24, 29, 0.05), 0 8px 24px rgba(24, 24, 29, 0.06);
+  --shadow-3: 0 12px 40px rgba(24, 24, 29, 0.12);
+  --shadow-focus: 0 0 0 3px #ece6ff;
+
+  /* Layout — DS layout.css의 --content-max, --h-btn-lg, 데스크톱 헤더 높이 */
+  --container-content: 1120px;
+  --spacing-btn-lg: 52px;
+  --spacing-header: 72px;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* 차트 색은 코드에서 `var(--color-chart-${i})`처럼 이름을 조립해 쓰므로 Tailwind가 사용 여부를 감지하지 못한다.
+   static으로 두어 항상 CSS 변수로 내보낸다 */
+@theme static {
+  /* Chart — 범주형 7색. 순서가 색각이상 대비를 보장하므로 바꾸지 말 것 (dataviz validate_palette.js 통과, 흰 바탕).
+     카테고리는 정렬 순서(정체성)로 고정 배정하고, 8번째부터는 chart-other(회색)로 묶는다 */
+  --color-chart-1: #6b43f2; /* 보라 = 브랜드 */
+  --color-chart-2: #eb6834; /* 주황 */
+  --color-chart-3: #1baf7a; /* 청록 */
+  --color-chart-4: #eda100; /* 노랑 */
+  --color-chart-5: #e87ba4; /* 분홍 */
+  --color-chart-6: #2a78d6; /* 파랑 */
+  --color-chart-7: #008300; /* 초록 */
+  --color-chart-other: #a6a6b6;
+  /* 수입·지출 두 계열. 파랑·보라 조합은 색각이상 대비가 부족해 청록·보라로 둔다 */
+  --color-chart-income: #1baf7a;
+  --color-chart-expense: #6b43f2;
+  --color-chart-grid: #e4e4ec;
+  --color-chart-axis: #cfcfda;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0;
+    font: 400 15px/1.55 var(--font-sans);
+    color: var(--color-body);
+    background: var(--color-page);
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; }
+  input, select, textarea { font: inherit; color: var(--color-strong); }
+  input::placeholder, textarea::placeholder { color: var(--color-disabled); }
+  /* 키보드 포커스: box-shadow는 shadow-* 유틸리티에 덮이고 흰 바탕 대비도 낮아 outline으로 그린다.
+     입력칸은 안쪽 input에 outline-none을 두고 바깥 상자의 focus-within으로 표시한다 */
+  :focus-visible { outline: 2px solid var(--color-line-focus); outline-offset: 2px; }
+  /* 숫자 입력 스피너 제거 */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+}
+
+/* 컴포넌트 기본값은 utilities보다 낮은 층에 둔다 → 호출부 className(h-10, gap-0, bg-danger-soft 등)이 항상 이긴다.
+   cx()는 클래스를 이어 붙이기만 해서, 같은 층에 있으면 Tailwind 출력 순서에 따라 기본값이 이길 수 있다 */
+@layer components {
+  .input-box { @apply h-12 w-full rounded-md border border-line-strong bg-white px-3.5 text-strong outline-none transition-[border,box-shadow]; }
+  .card-base { @apply bg-card border border-line rounded-lg shadow-1 flex flex-col gap-3; }
+}
+
+@utility msr {
+  font-family: var(--font-icon);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  white-space: nowrap;
+  overflow: hidden; /* 폰트가 늦으면 리거처 이름(receipt_long 등)이 글자로 보이는데, 상자 밖으로 넘치지 않게 */
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+@utility msr-fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/* 모바일 하단 탭 뒤 여백 */
+@utility pb-nav {
+  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+}
+/* 모바일 하단 탭 안쪽 아래 여백 (홈 인디케이터) */
+@utility pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 16px);
+}
+/* 하단 탭 바로 위에 띄우는 알림 위치 */
+@utility bottom-above-nav {
+  bottom: calc(96px + env(safe-area-inset-bottom));
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
